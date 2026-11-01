@@ -54,7 +54,7 @@ export function LeadForm({
   if (state.status === 'done') {
     return (
       <div className={`flex items-start gap-3 rounded-lg p-5 ${dark ? 'bg-white/10 text-white' : 'bg-accent-50 text-graphite-900'}`} role="status">
-        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-accent-500 text-white"><IconCheck /></span>
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-accent-500 text-graphite-950"><IconCheck /></span>
         <p className="pt-1 text-sm font-semibold">{interpolate(t.form.success, { n: state.number })}</p>
       </div>
     );

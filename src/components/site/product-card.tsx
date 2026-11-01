@@ -51,3 +51,29 @@ export function ProductCard({ product, locale, t }: { product: PublicProduct; lo
     </article>
   );
 }
+
+/** Строка спецификации: диаметр, формат, наличие, цена и действия — для списков на главной. */
+export function ProductSpecRow({ product, locale, t }: { product: PublicProduct; locale: Locale; t: Dictionary }) {
+  const href = localePath(locale, routes.product(product.slug));
+  const name = pick(product, 'name', locale);
+  const formats = product.supplyFormats.map((f) => t.formats[f as keyof typeof t.formats] ?? f).join(' / ');
+
+  return (
+    <article className="grid gap-4 border-t border-graphite-200 py-6 md:grid-cols-[8rem_1fr_auto] md:items-center md:gap-8">
+      <Link href={href} className="font-display text-5xl font-medium leading-none tracking-[-0.04em] text-graphite-950 hover:text-accent-600 md:text-6xl">
+        {product.diameterMm ? <>Ø{formatNumber(product.diameterMm, 1)}</> : '—'}
+      </Link>
+      <div className="space-y-2">
+        <h3 className="text-base font-bold"><Link href={href} className="hover:text-accent-600">{name}</Link></h3>
+        <div className="flex flex-wrap items-center gap-2 text-sm text-graphite-500">
+          <span className={`badge ${availabilityStyle[product.availability]}`}>{t.availability[product.availability]}</span>
+          {formats && <span>{formats}</span>}
+        </div>
+      </div>
+      <div className="flex flex-col gap-3 md:items-end">
+        <PriceTag price={product.retail} t={t} />
+        <ProductActions productId={product.id} defaultMeters={product.minOrderM ?? product.coilLengthM ?? 100} t={t} compact />
+      </div>
+    </article>
+  );
+}

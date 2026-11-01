@@ -62,7 +62,7 @@ export function CartView({ t, products }: { t: Dictionary; products: CartProduct
                 );
               })}
               <li className="flex items-center justify-between p-5">
-                <span className="text-sm font-bold uppercase tracking-wider text-graphite-500">{t.calc.preliminary}</span>
+                <span className="text-sm font-semibold text-graphite-500">{t.calc.preliminary}</span>
                 <span className="font-display text-xl font-semibold">{total ? formatTenge(total.toFixed(2)) : '—'}</span>
               </li>
             </ul>
@@ -71,7 +71,7 @@ export function CartView({ t, products }: { t: Dictionary; products: CartProduct
         </div>
         {lines.length > 0 && (
           <div className="card p-6 sm:p-8">
-            <h2 className="mb-5 font-display text-lg font-semibold uppercase">{t.cart.submit}</h2>
+            <h2 className="mb-5 font-display text-lg font-medium tracking-tight">{t.cart.submit}</h2>
             <LeadForm
               t={t}
               source="CART"

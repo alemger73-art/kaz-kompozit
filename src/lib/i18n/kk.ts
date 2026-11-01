@@ -58,6 +58,10 @@ export const kk: Dictionary = {
     ctaCatalog: 'Каталогты қарау',
     ctaWholesale: 'Көтерме ұсыныс алу',
     facts: ['Диаметрі 6–12 мм', 'Көтерме және бөлшек', 'ҚР бойынша жеткізу'],
+    pickDiameter: 'Диаметрді таңдаңыз',
+    scaleNote: 'Қималар бір-біріне қатысты масштабта көрсетілген',
+    productLink: 'Тауар карточкасы',
+    supply: 'Жеткізу түрі',
   },
   home: {
     advantagesEyebrow: 'Артықшылықтар',

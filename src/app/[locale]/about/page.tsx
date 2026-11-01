@@ -27,7 +27,7 @@ export default async function AboutPage({ params }: Props) {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="prose-site text-lg">{about.split('\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
           <div>
-            <h2 className="mb-5 text-sm font-bold uppercase tracking-wider text-graphite-500">{t.about.whatWeDo}</h2>
+            <h2 className="mb-5 text-sm font-semibold text-graphite-500">{t.about.whatWeDo}</h2>
             <ul className="space-y-3">
               {t.about.services.map((service) => (
                 <li key={service} className="flex items-center gap-3 card px-5 py-4 font-semibold">

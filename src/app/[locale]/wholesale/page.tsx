@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function Panel({ id, title, hint, children }: { id: string; title: string; hint?: string; children: React.ReactNode }) {
   return (
     <div id={id} className="card scroll-mt-24 p-6 sm:p-8">
-      <h2 className="font-display text-lg font-semibold uppercase">{title}</h2>
+      <h2 className="font-display text-lg font-medium tracking-tight">{title}</h2>
       {hint && <p className="mt-2 text-sm text-graphite-500">{hint}</p>}
       <div className="mt-6">{children}</div>
     </div>

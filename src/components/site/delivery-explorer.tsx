@@ -65,7 +65,7 @@ export function DeliveryExplorer({ t, cities, hubSlug = 'karaganda' }: { t: Dict
               type="button"
               onClick={() => setSelected(c.slug)}
               aria-pressed={c.slug === selected}
-              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${c.slug === selected ? 'border-accent-500 bg-accent-500 text-white' : 'border-white/15 text-white/70 hover:border-white hover:text-white'}`}
+              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${c.slug === selected ? 'border-accent-500 bg-accent-500 text-graphite-950' : 'border-white/15 text-white/70 hover:border-white hover:text-white'}`}
             >
               {c.name}
             </button>
@@ -76,7 +76,7 @@ export function DeliveryExplorer({ t, cities, hubSlug = 'karaganda' }: { t: Dict
       {city && (
         <div className="card flex flex-col p-6 sm:p-8">
           <span className="grid h-12 w-12 place-items-center rounded-lg bg-accent-50 text-accent-600"><IconTruck /></span>
-          <h3 className="mt-4 font-display text-2xl font-semibold uppercase">{city.name}</h3>
+          <h3 className="mt-4 font-display text-2xl font-medium tracking-tight">{city.name}</h3>
           {city.region && <p className="text-sm text-graphite-500">{city.region}</p>}
           <dl className="mt-6 space-y-3 text-sm">
             <div className="flex justify-between gap-4 border-b border-graphite-100 pb-3">
@@ -93,7 +93,7 @@ export function DeliveryExplorer({ t, cities, hubSlug = 'karaganda' }: { t: Dict
             )}
           </dl>
           <div className="mt-8 border-t border-graphite-100 pt-6">
-            <h4 className="mb-4 text-sm font-bold uppercase tracking-wider">{t.delivery.formTitle}</h4>
+            <h4 className="mb-4 text-sm font-semibold">{t.delivery.formTitle}</h4>
             <LeadForm key={city.slug} t={t} source="DELIVERY" fields={['message']} getPayload={() => ({ citySlug: city.slug })} />
           </div>
         </div>

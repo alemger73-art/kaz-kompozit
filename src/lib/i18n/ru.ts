@@ -56,6 +56,10 @@ export const ru = {
     ctaCatalog: 'Смотреть каталог',
     ctaWholesale: 'Получить оптовое предложение',
     facts: ['Диаметры 6–12 мм', 'Опт и розница', 'Доставка по РК'],
+    pickDiameter: 'Выберите диаметр',
+    scaleNote: 'Сечения показаны в масштабе друг к другу',
+    productLink: 'Карточка товара',
+    supply: 'Поставка',
   },
   home: {
     advantagesEyebrow: 'Преимущества',

@@ -128,7 +128,7 @@ export default async function ProductPage({ params }: Props) {
 
             <div className="space-y-6">
               <span className="badge bg-graphite-100 text-graphite-700">{t.availability[product.availability]}</span>
-              <h1 className="font-display text-[clamp(1.15rem,5.4vw,2.25rem)] font-semibold uppercase leading-tight [overflow-wrap:anywhere]">{name}</h1>
+              <h1 className="font-display text-[clamp(1.15rem,5.4vw,2.25rem)] font-medium tracking-tight leading-tight [overflow-wrap:anywhere]">{name}</h1>
               {description && <p className="leading-relaxed text-graphite-600">{description}</p>}
 
               <div className="grid gap-3 rounded-xl border border-graphite-100 bg-graphite-50 p-5 sm:grid-cols-2">
@@ -170,7 +170,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="bg-graphite-50 py-12 sm:py-16">
         <div className="container-site grid gap-8 lg:grid-cols-3">
           <div className="card p-6 lg:col-span-2">
-            <h2 className="mb-4 font-display text-lg font-semibold uppercase">{t.product.specs}</h2>
+            <h2 className="mb-4 font-display text-lg font-medium tracking-tight">{t.product.specs}</h2>
             <dl>
               {product.specs.map((spec) => (
                 <SpecRow
@@ -187,12 +187,12 @@ export default async function ProductPage({ params }: Props) {
           <div className="space-y-6">
             {applications && (
               <div className="card p-6">
-                <h2 className="mb-3 font-display text-lg font-semibold uppercase">{t.product.applications}</h2>
+                <h2 className="mb-3 font-display text-lg font-medium tracking-tight">{t.product.applications}</h2>
                 <p className="text-sm leading-relaxed text-graphite-600">{applications}</p>
               </div>
             )}
             <div className="card p-6">
-              <h2 className="mb-3 font-display text-lg font-semibold uppercase">{t.product.documents}</h2>
+              <h2 className="mb-3 font-display text-lg font-medium tracking-tight">{t.product.documents}</h2>
               {certificates.length === 0 ? (
                 <p className="text-sm text-graphite-500">{t.product.noDocuments}</p>
               ) : (
@@ -217,11 +217,11 @@ export default async function ProductPage({ params }: Props) {
       <section className="bg-white py-12 sm:py-16">
         <div className="container-site grid gap-8 lg:grid-cols-2">
           <div id="quote" className="card scroll-mt-24 p-6 sm:p-8">
-            <h2 className="mb-5 font-display text-lg font-semibold uppercase">{t.form.quoteTitle}</h2>
+            <h2 className="mb-5 font-display text-lg font-medium tracking-tight">{t.form.quoteTitle}</h2>
             <LeadForm t={t} source="QUOTE_REQUEST" fields={['email', 'company', 'city', 'message']} payload={{ items: [{ productId: product.id, meters: '0' }] }} submitLabel={t.common.requestQuote} />
           </div>
           <div className="card p-6 sm:p-8">
-            <h2 className="mb-5 font-display text-lg font-semibold uppercase">{t.form.quickOrderTitle}</h2>
+            <h2 className="mb-5 font-display text-lg font-medium tracking-tight">{t.form.quickOrderTitle}</h2>
             <LeadForm t={t} source="QUICK_ORDER" fields={['city']} payload={{ items: [{ productId: product.id, meters: String(product.minOrderM ?? 0) }] }} submitLabel={t.common.order} />
           </div>
         </div>

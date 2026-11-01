@@ -27,7 +27,7 @@ export default async function LeadsPage({ searchParams }: Props) {
       <div className="mb-4 flex flex-wrap gap-1.5 text-xs">
         <Link href="/admin/leads" className={`rounded-full border px-3 py-1 font-bold ${!validSource ? 'border-graphite-900 bg-graphite-900 text-white' : 'border-graphite-200 bg-white'}`}>Все</Link>
         {leadSourceEnum.enumValues.map((s) => (
-          <Link key={s} href={`/admin/leads?source=${s}`} className={`rounded-full border px-3 py-1 font-bold ${validSource === s ? 'border-accent-500 bg-accent-500 text-white' : 'border-graphite-200 bg-white'}`}>{SOURCE_LABELS[s]}</Link>
+          <Link key={s} href={`/admin/leads?source=${s}`} className={`rounded-full border px-3 py-1 font-bold ${validSource === s ? 'border-accent-500 bg-accent-500 text-graphite-950' : 'border-graphite-200 bg-white'}`}>{SOURCE_LABELS[s]}</Link>
         ))}
       </div>
       <Table head={['№ / дата', 'Клиент', 'Источник', 'Состав', 'Сделка']} empty={rows.length === 0}>

@@ -24,7 +24,7 @@ export function CompareView({ t, products }: { t: Dictionary; products: CompareP
       <table className="w-full min-w-[640px] text-sm">
         <thead>
           <tr className="border-b border-graphite-100">
-            <th className="w-48 p-4 text-left text-xs font-bold uppercase tracking-wider text-graphite-500">{t.compare.parameter}</th>
+            <th className="w-48 p-4 text-left text-xs font-semibold text-graphite-500">{t.compare.parameter}</th>
             {selected.map((p) => (
               <th key={p.id} className="p-4 text-left align-top">
                 <div className="flex items-start justify-between gap-2">

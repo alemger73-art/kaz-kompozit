@@ -32,7 +32,7 @@ function CounterLink({ href, label, count, children }: { href: string; label: st
     <Link href={href} aria-label={label} title={label} className="relative rounded-md p-2 text-white/80 transition hover:bg-white/10 hover:text-white">
       {children}
       {count > 0 && (
-        <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-accent-500 px-1 text-[10px] font-bold text-white">
+        <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-accent-500 px-1 text-[10px] font-bold text-graphite-950">
           {count}
         </span>
       )}
@@ -79,7 +79,7 @@ export function MobileMenu({ items, menuLabel, footer }: { items: NavItem[]; men
           </div>
           <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-6">
             {items.map((item) => (
-              <Link key={item.href} href={item.href} className="border-b border-white/10 py-4 font-display text-lg font-semibold uppercase text-white">
+              <Link key={item.href} href={item.href} className="border-b border-white/10 py-4 font-display text-lg font-medium text-white">
                 {item.label}
               </Link>
             ))}

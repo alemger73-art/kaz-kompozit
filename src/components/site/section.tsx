@@ -1,5 +1,6 @@
 type Props = {
   id?: string;
+  /** Оставлено для совместимости: подписи над заголовками не выводятся. */
   eyebrow?: string;
   title?: string;
   intro?: string;
@@ -14,15 +15,14 @@ const tones = {
   dark: 'bg-graphite-950 text-white tech-grid',
 };
 
-export function Section({ id, eyebrow, title, intro, tone = 'light', children, action }: Props) {
+export function Section({ id, title, intro, tone = 'light', children, action }: Props) {
   return (
     <section id={id} className={`${tones[tone]} py-16 sm:py-24`}>
       <div className="container-site">
-        {(title || eyebrow) && (
+        {title && (
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl space-y-3">
-              {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-              {title && <h2 className="h-section">{title}</h2>}
+              <h2 className="h-section">{title}</h2>
               {intro && <p className={tone === 'dark' ? 'text-white/60' : 'text-graphite-500'}>{intro}</p>}
             </div>
             {action}
@@ -34,12 +34,11 @@ export function Section({ id, eyebrow, title, intro, tone = 'light', children, a
   );
 }
 
-export function PageHero({ eyebrow, title, intro, children }: { eyebrow?: string; title: string; intro?: string; children?: React.ReactNode }) {
+export function PageHero({ title, intro, children }: { eyebrow?: string; title: string; intro?: string; children?: React.ReactNode }) {
   return (
     <section className="relative overflow-hidden bg-graphite-950 text-white tech-grid">
       <div className="container-site py-14 sm:py-20">
-        {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-        <h1 className="h-display mt-4 max-w-4xl text-[clamp(1.4rem,6.5vw,3rem)] [overflow-wrap:anywhere]">{title}</h1>
+        <h1 className="h-display max-w-4xl text-[clamp(1.75rem,6.5vw,3.5rem)] [overflow-wrap:anywhere]">{title}</h1>
         {intro && <p className="mt-5 max-w-2xl text-white/60 sm:text-lg">{intro}</p>}
         {children}
       </div>

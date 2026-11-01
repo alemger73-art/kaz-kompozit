@@ -87,7 +87,7 @@ export default async function PanelLayout({ children }: { children: React.ReactN
       <aside className="hidden w-64 shrink-0 bg-graphite-950 lg:block">
         <div className="sticky top-0 h-screen overflow-y-auto p-4">
           <Link href="/admin" className="mb-6 flex items-center gap-2 px-3 pt-2 font-display text-sm font-bold uppercase text-white">
-            <span className="grid h-8 w-8 place-items-center rounded bg-accent-500">K</span>Админка
+            <span className="grid h-8 w-8 place-items-center rounded bg-accent-500 text-graphite-950">K</span>Админка
           </Link>
           {sidebar}
         </div>

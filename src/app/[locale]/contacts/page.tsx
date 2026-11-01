@@ -67,7 +67,7 @@ export default async function ContactsPage({ params }: Props) {
             )}
           </div>
           <div className="card p-6 sm:p-8">
-            <h2 className="mb-5 font-display text-lg font-semibold uppercase">{t.form.contactTitle}</h2>
+            <h2 className="mb-5 font-display text-lg font-medium tracking-tight">{t.form.contactTitle}</h2>
             <LeadForm t={t} source="CONTACT_FORM" fields={['email', 'company', 'city', 'message']} />
           </div>
         </div>

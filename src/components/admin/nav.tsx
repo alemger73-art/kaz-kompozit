@@ -20,7 +20,7 @@ export function AdminNav({ groups }: { groups: NavGroup[] }) {
                   className={`flex items-center justify-between rounded-md px-3 py-2 text-sm transition ${isActive(item.href) ? 'bg-white/10 font-bold text-white' : 'text-white/65 hover:bg-white/5 hover:text-white'}`}
                 >
                   {item.label}
-                  {item.badge ? <span className="rounded-full bg-accent-500 px-1.5 text-[10px] font-bold text-white">{item.badge}</span> : null}
+                  {item.badge ? <span className="rounded-full bg-accent-500 px-1.5 text-[10px] font-bold text-graphite-950">{item.badge}</span> : null}
                 </Link>
               </li>
             ))}

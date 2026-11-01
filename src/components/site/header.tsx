@@ -9,7 +9,7 @@ export function Logo({ name, href }: { name: string; href: string }) {
   const [first, ...rest] = name.split(' ');
   return (
     <Link href={href} className="group flex items-center gap-2.5" aria-label={name}>
-      <span className="grid h-9 w-9 place-items-center rounded-md bg-accent-500 font-display text-sm font-bold text-white transition group-hover:rotate-6">
+      <span className="grid h-9 w-9 place-items-center rounded-md bg-accent-500 font-display text-sm font-bold text-graphite-950 transition group-hover:rotate-6">
         {first.slice(0, 1)}
       </span>
       <span className="font-display text-[15px] font-bold uppercase leading-none tracking-tight text-white">

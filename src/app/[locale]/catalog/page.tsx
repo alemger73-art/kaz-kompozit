@@ -90,7 +90,7 @@ export default async function CatalogPage({ params, searchParams }: Props) {
         <div className="container-site grid gap-8 lg:grid-cols-[260px_1fr]">
           <aside className="space-y-6" aria-label={t.catalog.filters}>
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-bold uppercase tracking-wider">{t.catalog.filters}</h2>
+              <h2 className="text-sm font-semibold">{t.catalog.filters}</h2>
               {hasFilters && <Link href={base} className="text-xs font-bold text-accent-600 hover:underline">{t.catalog.reset}</Link>}
             </div>
             {groups.filter((g) => g.options.length > 1 || filters[g.key]).map((group) => (
@@ -107,7 +107,7 @@ export default async function CatalogPage({ params, searchParams }: Props) {
                     <Link
                       key={option.value}
                       href={hrefWith(group.key, option.value)}
-                      className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${filters[group.key] === option.value ? 'border-accent-500 bg-accent-500 text-white' : 'border-graphite-200 bg-white hover:border-graphite-900'}`}
+                      className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${filters[group.key] === option.value ? 'border-accent-500 bg-accent-500 text-graphite-950' : 'border-graphite-200 bg-white hover:border-graphite-900'}`}
                     >
                       {option.label}
                     </Link>

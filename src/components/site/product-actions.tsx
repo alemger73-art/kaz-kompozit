@@ -36,7 +36,7 @@ export function ProductActions({ productId, defaultMeters, t, compact }: {
         onClick={() => compare.toggle(productId)}
         aria-pressed={compare.has(productId)}
         title={compare.has(productId) ? t.product.comparing : t.product.compare}
-        className={`${iconButton} ${compare.has(productId) ? 'border-accent-500 bg-accent-500 text-white' : 'border-graphite-200 text-graphite-500 hover:border-graphite-900 hover:text-graphite-900'}`}
+        className={`${iconButton} ${compare.has(productId) ? 'border-accent-500 bg-accent-500 text-graphite-950' : 'border-graphite-200 text-graphite-500 hover:border-graphite-900 hover:text-graphite-900'}`}
       >
         <IconCompare />
       </button>

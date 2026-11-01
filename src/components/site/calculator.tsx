@@ -107,7 +107,7 @@ export function Calculator({ t, products, cities, rules, whatsapp, initialProduc
                   role="radio"
                   aria-checked={p.id === productId}
                   onClick={() => setProductId(p.id)}
-                  className={`rounded-md border px-2 py-3 text-center font-display text-sm font-semibold transition ${p.id === productId ? 'border-accent-500 bg-accent-500 text-white' : 'border-graphite-200 hover:border-graphite-900'}`}
+                  className={`rounded-md border px-2 py-3 text-center font-display text-sm font-semibold transition ${p.id === productId ? 'border-accent-500 bg-accent-500 text-graphite-950' : 'border-graphite-200 hover:border-graphite-900'}`}
                 >
                   {p.shortLabel}
                 </button>
@@ -193,7 +193,7 @@ export function Calculator({ t, products, cities, rules, whatsapp, initialProduc
           <Row label={c.mass} value={result.massKg ? `${formatNumber(result.massKg)} ${t.common.kg}` : c.massUnknown} muted={!result.massKg} />
           <Row label={c.delivery} value={result.delivery.cost ? formatTenge(result.delivery.cost) : c.deliveryManager} muted={!result.delivery.cost} />
           <div className="mt-4 rounded-lg border border-white/10 bg-white/5 p-4">
-            <div className="text-xs font-bold uppercase tracking-wider text-white/50">{c.grandTotal}</div>
+            <div className="text-xs font-semibold text-white/50">{c.grandTotal}</div>
             <div className="mt-1 font-display text-3xl font-semibold text-accent-400">
               {result.grandTotal ? formatTenge(result.grandTotal) : '—'}
             </div>

@@ -8,40 +8,39 @@
 @layer base {
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   body { @apply bg-white text-graphite-900 font-sans antialiased; }
-  ::selection { @apply bg-accent-500 text-white; }
+  ::selection { @apply bg-accent-300 text-graphite-950; }
   :focus-visible { @apply outline-none ring-2 ring-accent-500 ring-offset-2; }
 }
 
 @layer components {
   .container-site { @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8; }
-  .h-display { @apply font-display font-semibold uppercase tracking-tight leading-[0.95]; }
-  .h-section { @apply font-display text-xl [overflow-wrap:anywhere] font-semibold uppercase tracking-tight sm:text-3xl lg:text-4xl; }
-  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-accent-500; }
-  .eyebrow::before { content: ''; @apply h-px w-6 bg-current; }
+  .h-display { @apply font-display font-medium tracking-[-0.035em] leading-[1.02]; }
+  .h-section { @apply font-display text-2xl font-medium leading-tight tracking-[-0.03em] [overflow-wrap:anywhere] sm:text-4xl lg:text-[2.75rem]; }
+  .eyebrow { @apply inline-flex items-center gap-2 text-sm font-semibold text-graphite-500; }
 
-  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-50; }
-  .btn-primary { @apply btn bg-accent-500 text-white hover:bg-accent-600 active:translate-y-px; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-accent-500 text-graphite-950 hover:bg-accent-400 active:translate-y-px; }
   .btn-dark { @apply btn bg-graphite-900 text-white hover:bg-graphite-800; }
-  .btn-outline { @apply btn border border-graphite-300 text-graphite-900 hover:border-graphite-900; }
+  .btn-outline { @apply btn border border-graphite-300 text-graphite-900 hover:border-graphite-900 hover:bg-graphite-900 hover:text-white; }
   .btn-ghost-light { @apply btn border border-white/25 text-white hover:border-white hover:bg-white/5; }
   .btn-sm { @apply px-3 py-2 text-xs; }
 
-  .field-label { @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-graphite-500; }
-  .field { @apply w-full rounded-md border border-graphite-200 bg-white px-3.5 py-2.5 text-sm text-graphite-900 placeholder:text-graphite-400 transition focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20; }
+  .field-label { @apply mb-1.5 block text-[13px] font-semibold text-graphite-600; }
+  .field { @apply w-full rounded-lg border border-graphite-200 bg-white px-3.5 py-2.5 text-sm text-graphite-900 placeholder:text-graphite-400 transition focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20; }
 
-  .card { @apply rounded-xl border border-graphite-100 bg-white; }
-  .badge { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide; }
+  .card { @apply rounded-2xl border border-graphite-200/70 bg-white; }
+  .badge { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold; }
 
   .tech-grid {
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+      linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
     background-size: 48px 48px;
   }
   .tech-grid-light {
     background-image:
-      linear-gradient(to right, rgb(15 17 19 / 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(15 17 19 / 0.05) 1px, transparent 1px);
+      linear-gradient(to right, rgb(17 26 31 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(17 26 31 / 0.045) 1px, transparent 1px);
     background-size: 40px 40px;
   }
   .prose-site p { @apply mb-4 leading-relaxed text-graphite-700; }
